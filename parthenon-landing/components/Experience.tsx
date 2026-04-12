@@ -40,6 +40,15 @@ const amenities = [
     image: "/images/cardio.png",
     tag: "24/7",
   },
+  {
+    id: "surf",
+    title: "Indoor Surf Simulator",
+    subtitle: "Year-Round Wave Riding",
+    description:
+      "An indoor stationary wave pool built for all skill levels. Learn to surf, sharpen your form, or just experience the thrill of riding water indoors, any season.",
+    image: "/images/indoor-surf.png",
+    tag: "Signature",
+  },
 ];
 
 const nonImageAmenities = [
@@ -93,8 +102,8 @@ export default function Experience() {
         {/* Primary amenity grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           {amenities.map((amenity, i) => (
-            <AnimateOnScroll key={amenity.id} delay={i * 0.1}>
-              <div className="amenity-card group relative aspect-[4/3] overflow-hidden bg-charcoal">
+            <AnimateOnScroll key={amenity.id} delay={i * 0.1} className={amenity.id === "surf" ? "md:col-span-2" : ""}>
+              <div className={`amenity-card group relative overflow-hidden bg-charcoal ${amenity.id === "surf" ? "aspect-[21/9]" : "aspect-[4/3]"}`}>
                 <Image
                   src={amenity.image}
                   alt={amenity.title}

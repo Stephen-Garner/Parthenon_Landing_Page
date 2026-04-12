@@ -36,7 +36,7 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-18 py-4">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-24 py-4">
           {/* Logo */}
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex-shrink-0">
             <Logo
